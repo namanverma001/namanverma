@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Code2, Download, ExternalLink } from 'lucide-react';
