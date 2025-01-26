@@ -42,9 +42,9 @@ export const education: Education[] = [
 
 export const achievements: Achievement[] = [
   {
-    title: "Hackathon Winner",
-    description: "First place in National Level Hackathon",
-    date: "2023"
+    title: "DBMS Mini Project Winner",
+    description: "2nd place in DBMS Mini Project competition",
+    date: "Nov 2024"
   },
   // Add more achievements
 ];
