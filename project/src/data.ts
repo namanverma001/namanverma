@@ -30,13 +30,13 @@ export const education: Education[] = [
     degree: "HSC (XII)",
     institution: "B.D Public School,Hajipur",
     year: "2020-2022",
-    score: "84.20%"
+    score: "First Class"
   },
   {
     degree: "SSC (X)",
     institution: "St. John's Academy,Mahua",
     year: "2020",
-    score: "78%"
+    score: "First Class"
   }
 ];
 
