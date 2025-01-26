@@ -157,7 +157,7 @@ function App() {
             <div className="md:col-span-2 text-[#8892b0] space-y-4">
               <p>
                 Hello! My name is Naman Verma, and I enjoy creating things that live on the internet.
-                My interest in web development started back in 2020 when I decided to try building my first website.
+                My interest in web development started back in 2022 when I decided to try building my first website.
                 That simple portfolio site taught me a lot about HTML, CSS, and JavaScript, sparking my passion for development!
               </p>
               <p>
