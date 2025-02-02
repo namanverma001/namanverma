@@ -1,5 +1,5 @@
 import React from 'react';
-import { Moon, Sun } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface ThemeToggleProps {
@@ -7,20 +7,24 @@ interface ThemeToggleProps {
   toggleTheme: () => void;
 }
 
-export const ThemeToggle: React.FC<ThemeToggleProps> = ({ darkMode, toggleTheme }) => {
+export function ThemeToggle({ darkMode, toggleTheme }: ThemeToggleProps) {
   return (
     <motion.button
+      onClick={toggleTheme}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      onClick={toggleTheme}
-      className="fixed top-4 right-4 p-2 rounded-full bg-[#112240] text-[#64ffda] z-50"
-      style={{ display: 'none' }} // Hide the theme toggle since we're keeping dark theme
+      className={`fixed top-6 right-6 p-3 rounded-full z-[100] shadow-lg transition-colors duration-300 bg-red-500 ${
+        darkMode 
+          ? 'bg-[#112240] hover:bg-[#233554]' 
+          : 'bg-white hover:bg-gray-100'
+      }`}
+      aria-label="Toggle theme"
     >
       {darkMode ? (
-        <Sun className="w-6 h-6" />
+        <Sun className="w-6 h-6 text-[#64ffda]" />
       ) : (
-        <Moon className="w-6 h-6" />
+        <Moon className="w-6 h-6 text-emerald-600" />
       )}
     </motion.button>
   );
-};
+}
