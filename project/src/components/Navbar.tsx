@@ -52,7 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item, index) => (
+            {menuItems.map((item) => (
               <motion.div
                 key={item}
                 whileHover={{ scale: 1.1 }}
@@ -68,9 +68,6 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                       : 'text-black hover:text-blue-600'
                   } transition-colors duration-300`}
                 >
-                  <span className={darkMode ? 'text-[#64ffda]' : 'text-emerald-700'}>
-                    0{index + 1}.{' '}
-                  </span>
                   {item}
                 </Link>
               </motion.div>
@@ -141,7 +138,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                 : 'bg-white shadow-lg'
             }`}
           >
-            {menuItems.map((item, index) => (
+            {menuItems.map((item) => (
               <motion.div
                 key={item}
                 whileHover={{ scale: 1.05 }}
@@ -153,14 +150,11 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                   duration={500}
                   className={`block cursor-pointer text-sm font-mono ${
                     darkMode 
-                      ? 'text-[#ccd6f6] hover:text-[#64ffda]' 
+                      ? 'text-[#ccd6f6] hover:text-[#0d0c23]' 
                       : 'text-black hover:text-blue-600'
                   } transition-colors duration-300`}
                   onClick={() => setIsOpen(false)}
                 >
-                  <span className={darkMode ? 'text-[#64ffda]' : 'text-emerald-700'}>
-                    0{index + 1}.{' '}
-                  </span>
                   {item}
                 </Link>
               </motion.div>
