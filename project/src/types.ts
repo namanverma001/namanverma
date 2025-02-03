@@ -12,8 +12,11 @@ export interface Education {
   institution: string;
   year: string;
   score: string;
+  image?: string;
   details?: {
-    marks?: Record<string, string>;
+    marks: {
+      [key: string]: string;
+    };
   };
 }
 
@@ -21,4 +24,5 @@ export interface Achievement {
   title: string;
   description: string;
   date: string;
+  image?: string;
 }

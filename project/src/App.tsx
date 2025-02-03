@@ -373,25 +373,42 @@ function App() {
         </div>
       </section>
 
-      {/* Achievements Section */}
+      {/* Achievements and Extracurricular Section */}
       <section id="achievements" className="py-20 px-8 md:px-24 max-w-7xl mx-auto">
-        <h2 className={`text-3xl font-bold mb-12 ${darkMode ? 'text-[#ccd6f6]' : 'text-black'}`}>Achievements</h2>
-        <div className="max-w-3xl space-y-6">
+        <h2 className={`text-3xl font-bold mb-12 ${darkMode ? 'text-[#ccd6f6]' : 'text-black'}`}>
+          Achievements and Extracurricular
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className={`p-6 rounded border ${
+              className={`aspect-square rounded-lg border overflow-hidden ${
                 darkMode 
                   ? 'border-[#233554] hover:border-[#64ffda] bg-[#112240]/50' 
                   : 'border-blue-100 hover:border-blue-500 bg-white shadow-sm'
-              } transition-colors duration-300`}
+              } transition-colors duration-300 group`}
             >
-              <h3 className={`text-xl font-bold ${darkMode ? 'text-[#ccd6f6]' : 'text-black'} mb-2`}>{achievement.title}</h3>
-              <p className={darkMode ? 'text-[#8892b0]' : 'text-gray-700'}>{achievement.description}</p>
-              <p className={`mt-2 font-mono ${darkMode ? 'text-[#64ffda]' : 'text-blue-600'}`}>{achievement.date}</p>
+              <div className="h-1/2 overflow-hidden">
+                <img 
+                  src={achievement.image} 
+                  alt={achievement.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6 h-1/2 flex flex-col">
+                <h3 className={`text-xl font-bold ${darkMode ? 'text-[#ccd6f6]' : 'text-black'} mb-2`}>
+                  {achievement.title}
+                </h3>
+                <p className={`text-sm ${darkMode ? 'text-[#8892b0]' : 'text-gray-700'} flex-grow`}>
+                  {achievement.description}
+                </p>
+                <p className={`mt-2 text-sm font-mono ${darkMode ? 'text-[#64ffda]' : 'text-blue-600'}`}>
+                  {achievement.date}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

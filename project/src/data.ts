@@ -9,6 +9,7 @@ export const projects: Project[] = [
     liveUrl: "https://project1.com",
     image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000"
   },
+  
   // Add more projects as needed
 ];
 
@@ -44,6 +45,11 @@ export const education: Education[] = [
 ];
 
 export const achievements: Achievement[] = [
+  {
+    title: "DBMS Mini Project Winner",
+    description: "2nd place in DBMS Mini Project competition",
+    date: "Nov 2024"
+  },
   {
     title: "DBMS Mini Project Winner",
     description: "2nd place in DBMS Mini Project competition",
