@@ -248,12 +248,14 @@ function App() {
                     : 'border-blue-100 hover:border-blue-500 bg-white shadow-sm'
                 } transition-colors duration-300`}
               >
-                <h3 className="text-xl font-bold text-[#ccd6f6]">{edu.degree}</h3>
-                <p className="text-[#8892b0]">{edu.institution}</p>
-                <p className="text-[#8892b0]">{edu.year}</p>
-                <p className="text-[#64ffda]">{edu.score}</p>
+                <h3 className={`text-xl font-bold ${darkMode ? 'text-[#ccd6f6]' : 'text-black'}`}>{edu.degree}</h3>
+                <p className={darkMode ? 'text-[#8892b0]' : 'text-gray-700'}>{edu.institution}</p>
+                <p className={darkMode ? 'text-[#8892b0]' : 'text-gray-700'}>{edu.year}</p>
+                <p className={`${darkMode ? 'text-[#64ffda]' : 'text-blue-600'}`}>{edu.score}</p>
                 {edu.details?.marks && (
-                  <ul className="list-disc list-inside text-[#64ffda]">
+                  <ul className={`list-disc list-inside ${
+                    darkMode ? 'text-[#64ffda]' : 'text-blue-600'
+                  }`}>
                     {Object.entries(edu.details.marks).map(([subject, mark]) => (
                       <li key={subject}>
                         {subject}: {mark}
@@ -284,11 +286,13 @@ function App() {
                     : 'border-blue-100 hover:border-blue-500 bg-white shadow-sm'
                 } transition-colors duration-300`}
               >
-                <h3 className="text-xl font-bold text-[#ccd6f6]">{exp.role}</h3>
-                <p className="text-[#8892b0]">{exp.company}</p>
-                <p className="text-[#8892b0]">{exp.duration}</p>
-                <p className="text-[#8892b0]">{exp.Location}</p>
-                <ul className="list-disc list-inside text-[#64ffda] mt-4 space-y-1">
+                <h3 className={`text-xl font-bold ${darkMode ? 'text-[#ccd6f6]' : 'text-black'}`}>{exp.role}</h3>
+                <p className={darkMode ? 'text-[#8892b0]' : 'text-gray-700'}>{exp.company}</p>
+                <p className={darkMode ? 'text-[#8892b0]' : 'text-gray-700'}>{exp.duration}</p>
+                <p className={darkMode ? 'text-[#8892b0]' : 'text-gray-700'}>{exp.Location}</p>
+                <ul className={`list-disc list-inside mt-4 space-y-1 ${
+                  darkMode ? 'text-[#64ffda]' : 'text-blue-600'
+                }`}>
                   {exp.responsibilities.map((resp, i) => (
                     <li key={i}>{resp}</li>
                   ))}
@@ -321,14 +325,12 @@ function App() {
                 </div>
               </div>
               <div className={`${index % 2 === 0 ? 'md:order-2 md:text-right' : 'md:order-1'}`}>
-                <p className="text-[#64ffda] font-mono mb-2">Featured Project</p>
+                <p className={`font-mono mb-2 ${darkMode ? 'text-[#64ffda]' : 'text-blue-600'}`}>Featured Project</p>
                 <h3 className={`text-2xl font-bold ${darkMode ? 'text-[#ccd6f6]' : 'text-black'} mb-4`}>{project.title}</h3>
                 <div className={`bg-opacity-90 backdrop-blur-sm rounded shadow-xl mb-4 ${
                   darkMode ? 'bg-[#112240]' : 'bg-white'
                 }`}>
-                  <p className={`${
-                    darkMode ? 'text-[#8892b0]' : 'text-black/80'
-                  }`}>{project.description}</p>
+                  <p className={darkMode ? 'text-[#8892b0]' : 'text-gray-700'}>{project.description}</p>
                 </div>
                 <div className={`flex flex-wrap gap-4 mb-8 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                   {project.technologies.map((tech) => (
@@ -387,9 +389,9 @@ function App() {
                   : 'border-blue-100 hover:border-blue-500 bg-white shadow-sm'
               } transition-colors duration-300`}
             >
-              <h3 className="text-xl font-bold text-[#ccd6f6] mb-2">{achievement.title}</h3>
-              <p className="text-[#8892b0]">{achievement.description}</p>
-              <p className="text-[#64ffda] mt-2 font-mono">{achievement.date}</p>
+              <h3 className={`text-xl font-bold ${darkMode ? 'text-[#ccd6f6]' : 'text-black'} mb-2`}>{achievement.title}</h3>
+              <p className={darkMode ? 'text-[#8892b0]' : 'text-gray-700'}>{achievement.description}</p>
+              <p className={`mt-2 font-mono ${darkMode ? 'text-[#64ffda]' : 'text-blue-600'}`}>{achievement.date}</p>
             </motion.div>
           ))}
         </div>

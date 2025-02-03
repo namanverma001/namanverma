@@ -18,6 +18,7 @@ export const education: Education[] = [
     institution: "K.K Wagh Institute of Engineering Eductaion and Research,Nashik",
     year: "2022-2026",
     score: "Overall CGPA: 8.96",
+    image: "/images/kkwagh.jpg",
     details: {
       marks: {
         "FY-BTech CGPA": "9.02",
@@ -30,13 +31,15 @@ export const education: Education[] = [
     degree: "HSC (XII)",
     institution: "B.D Public School,Hajipur",
     year: "2020-2022",
-    score: "First Class"
+    score: "First Class",
+    image: "/images/bdpublic.jpg"
   },
   {
     degree: "SSC (X)",
     institution: "St. John's Academy,Mahua",
     year: "2020",
-    score: "First Class"
+    score: "First Class",
+    image: "/images/stjohns.jpg"
   }
 ];
 
